@@ -2,30 +2,22 @@
  * sagas.js
  */
 import { effects } from './redux-saga/dist/redux-saga';
-import { ADD, MINUS } from './constants/counter';
-import { addSaga } from './servers/servers';
 
 const { put, takeEvery, call, all } = effects;
 
-function* add_saga(action) {
-    const result = yield call(addSaga, action.payload);
-    yield put({ type: ADD, result });
-}
-function* minus_saga(action) {
-    const result = yield call(addSaga, action.payload);
-    yield put({ type: MINUS, result });
+function* getLocation(action) {
+    // const result = yield call(addSaga, action.payload);
+    const payload = action.payload;
+    yield put({ type: 'SET_LOCATION', action: payload });
 }
 
-function* watch_add() {
-    yield takeEvery("ADD_SAGA", add_saga)
-}
-function* watch_minus() {
-    yield takeEvery("MINUS_SAGA", minus_saga)
+// 保存当前位置
+function* watchGetLocation() {
+    yield takeEvery("SET_LOCATION_WATCH", getLocation)
 }
 
 export default function* rootSaga() {
     yield all([
-        watch_add(),
-        watch_minus(),
+      watchGetLocation(),
     ]);
 }

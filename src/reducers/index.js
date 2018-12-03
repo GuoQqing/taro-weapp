@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import counter from './counter'
+import AppStore from './counter'
 
 export default combineReducers({
-  counter
+  AppStore
 })
