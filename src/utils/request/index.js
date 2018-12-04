@@ -3,7 +3,7 @@
  */
 import Taro from '@tarojs/taro'
 import app_config from '../../config'
-import { make_api_headers } from './makeHeaders'
+import { make_api_headers } from './makeHeader/makeHeaders'
 
 const { url, access_key, secret_key } = app_config;
 
