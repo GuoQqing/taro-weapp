@@ -1,7 +1,7 @@
 /**
  * 请求接口
  */
-import { X_TOKEN, X_AUTH } from '../utils/request/makeHeaders'
+import { X_TOKEN, X_AUTH } from '../utils/request/makeHeader/makeHeaders'
 import request_api from '../utils/request'
 
 export const authService = {
