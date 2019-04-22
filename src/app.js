@@ -9,6 +9,7 @@ import configStore from './store'
 import './app.less'
 
 const store = configStore()
+const a = 1;
 
 class App extends Component {
 
