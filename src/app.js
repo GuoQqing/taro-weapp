@@ -11,6 +11,7 @@ import './app.less'
 const store = configStore()
 const a = 1;
 const b = 2;
+const c = 3;
 
 class App extends Component {
 
