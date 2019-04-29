@@ -7,7 +7,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const middlewares = [
   sagaMiddleware,
-  a,
+  b,
 ]
 
 // if (process.env.NODE_ENV === 'development') {
